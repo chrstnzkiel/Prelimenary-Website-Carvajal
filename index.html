@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ask.jpg" type="image/jpg" sizes="96x96">
+    <title>Ask Jeeves: Asked and Answered</title>
+    <style> 
+        .body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            min-width: 1400px;
+        }
+
+        .header {  
+            background-color: #686494;
+            padding: 10px;
+            text-align: left;
+            color: white;
+            font-size: 12px;
+            width: 893px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .top-right-image {
+            position: absolute;
+            top: 7px;
+            right: -22px;
+        }
+
+        .top-right-image img {
+            width: auto;
+            height: 180px;
+            margin-right: 12px;
+            margin-top: 1px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 12px;
+        }
+
+        .container {
+            width: 913px;
+            margin: 0 auto;
+            border: 1px solid #cccccc;
+            background-color: #ffffcc;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            background: linear-gradient(to bottom, #ccd098, #ccd098);
+            width: 220px;
+            float: left;
+            padding: 15px;
+            border-right: 1px solid #cccccc;
+            height: auto;
+            text-align: center;
+        }
+
+        .sidebar h2 {
+            font-size: 16px;
+            color: #c80404;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif;
+        }
+
+        .sidebar ul {
+            list-style-type: unset;
+            margin-top: 23px;
+            padding-left: 10px;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px; 
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .jeeves-image {
+            margin-right: 20px;
+            float: left;
+            width: 200px; 
+            height: 290px; 
+        }
+
+        .main-content {
+            padding-left: 240px; 
+        }
+
+        .main-content h1 {
+            color: #c80404;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif; 
+            text-shadow: 1px 1px 2px #aaa; 
+        }
+
+        .question-section {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            height: 300px;
+        }
+
+        .jeeves-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .question-text {
+            position: absolute;
+            top: 150px;
+            left: 210px;
+        }
+
+        .question-text h1 {
+            color: #c80404;
+            font-size: 24px;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            text-shadow: 1px 1px 2px #aaa;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.2;
+        }
+
+        .question-text h1 small {
+            font-size: 18px;
+            color: #c80404;
+            font-weight: normal;
+            margin-bottom: 5px;
+            margin-left: 110px;
+        }
+
+        .question-text h1 .big-text {
+            font-size: 36px;
+            line-height: 1;
+            font-weight: bold;
+            margin-left: 100px
+        }
+
+        .question-text h1 .ask-text {
+            margin-left: 110px;
+            margin-top: -40px;
+            font-weight: bold;
+        }
+
+        .havea {
+            margin-bottom: -10px;
+            margin-left: 25px;
+        }
+
+        .question-box {
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 14px;
+            width: 300px;
+            border: 1px solid #cccccc;
+            position: relative
+        }
+
+        .ask-image {
+            margin-left: 15px;
+            cursor: pointer;
+            vertical-align: middle;
+            position: absolute;
+        }
+
+        .recent-questions {
+            background-color: #ffffcc;
+            padding: 15px;
+            margin-top: 20px;
+            margin-left: 400px;
+            margin-right: 100px;
+        }
+
+        .question-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .question-text-box {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            width: 300px;
+            background-color: whitesmoke;
+            margin-top: 0px;
+        }
+
+        .question-text-box input {
+            border: none;
+            background-color: whitesmoke;
+            width: 100%;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .ask2-image {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .footer {
+            clear: both;
+            text-align: center;
+            font-size: 12px;
+            padding: 10px;
+            background-color: #686494;
+            color: white;
+            width: 893px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .privacystatement {
+            margin-left: 420px;
+            padding: 55px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="https://www.ask.com/" target="_blank" rel="noopener noreferrer">Home</a>
+        <a href="https://en.wikipedia.org/wiki/Ask.com#:~:text=Ask.com%20(originally%20known%20as,David%20Warthen%20in%20Berkeley%2C%20California.&text=Oakland%2C%20California%2C%20U.S." target="_blank" rel="noopener noreferrer">About</a>
+        <a href="https://help.askmediagroup.com/hc/en-us" 9target="_blank" rel="noopener noreferrer">Help</a>
+        <a href="https://www.crunchbase.com/organization/ask-com" target="_blank" rel="noopener noreferrer">Corporate Services</a>
+        <a href="https://www.ask.com/web?q=personal%20jeeves" class="top-right-image" target="_blank" rel="noopener noreferrer">
+            <img src="rightimage.png" alt="Personal Jeeves">
+        </a>
+    </div>
+
+    
+    <div class="container">
+        <div class="sidebar">
+            <h2><strong>May I Suggest:</strong></h2>
+            <ul>
+                <li><a href="https://www.ask.com/web?ueid=071BFBA5-9137-4483-BE04-5824D92558BB&o=0&an=organic&ad=Other+SEO&qo=serpSearchTopBox&q=personal+jeeves" target="_blank" rel="noopener noreferrer">PERSONAL JEEVES</a></li>
+                <li><a href="https://www.ask.com/web?ueid=071BFBA5-9137-4483-BE04-5824D92558BB&o=0&an=organic&ad=Other+SEO&qo=serpSearchTopBox&q=answer+point" target="_blank" rel="noopener noreferrer">ANSWER POINT</a></li>
+                <li><a href="https://www.ask.com/web?ueid=071BFBA5-9137-4483-BE04-5824D92558BB&o=0&an=organic&ad=Other+SEO&qo=serpSearchTopBox&q=money" target="_blank" rel="noopener noreferrer">MONEY</a></li>
+                <li><a href="https://www.ask.com/lifestyle/travel?qo=travel" target="_blank" rel="noopener noreferrer">TRAVEL</a></li>
+                <li><a href="https://www.ask.com/culture/health-benefits-homemade-chicken-noodle-soup-nutritional-breakdown?qo=health" target="_blank" rel="noopener noreferrer">HEALTH</a></li>
+                <li><a href="https://www.ask.com/news/tech-talk?qo=tech-talk" target="_blank" rel="noopener noreferrer">COMPUTERS</a></li>
+                <li><a href="https://www.ask.com/web?ueid=071BFBA5-9137-4483-BE04-5824D92558BB&o=0&an=organic&ad=Other+SEO&qo=serpSearchTopBox&q=Home+and+Family" target="_blank" rel="noopener noreferrer">HOME & FAMILY</a></li>
+                <li><small><a href="https://www.ask.com/web?ueid=071BFBA5-9137-4483-BE04-5824D92558BB&o=0&an=organic&ad=Other+SEO&qo=serpSearchTopBox&q=ask+jeeves+for+kids" target="_blank" rel="noopener noreferrer">ASK JEEVES FOR KIDS</a></small></li>
+            </ul>
+        <a href="https://www.ask.com/web?ueid=FB0FA933-E2EA-4678-8020-BCE1E90D4438&o=0&an=organic&ad=Other+SEO&qo=serpSearchTopBox&q=buy+toys" target="_blank" rel="noopener noreferrer">
+            <img src="toys.jpg" alt="Toys" style="width: 100%; height: auto;">
+        </a>
+        </div>
+
+        
+        <div class="main-content">
+            <div class="question-section">
+    <img class="jeeves-image" src="jeeves-character.jpg" alt="Jeeves">
+    <div class="question-text">
+        <h1>
+            <div class="havea">
+            <small><strong>Have a</strong></small>
+            </div>
+            <span class="big-text" style="font-size: 40px;"><strong>Question?</strong></span>
+            <small class="small-text" style="margin-left: 125px">Just type it <br> in and click </small>
+            <span class="big-text" style="margin-left: 220px; margin-top: -45px; font-weight: bold; font-size: 40px;">Ask!</span>
+            
+        </h1>
+        <form action="https://www.ask.com/web" method="get" target="_blank" rel="noopener noreferrer">
+            <input type="text" name="q" class="question-box" placeholder="Type your question here...">
+            <input type="image" src="ask.jpg" alt="Ask!" class="ask-image" width="50">
+        </form>
+    </div>
+</div>
+</div>
+            
+        <div class="recent-questions">
+    <p><strong>Most Recent Questions About <span style="color: #c80404;">Real Estate:</span></strong></p>
+    <form action="https://www.ask.com/web" method="get" target="_blank" rel="noopener noreferrer">
+        <div class="question-container">
+            <div class="question-text-box">
+                <input type="text" name="q" placeholder="How can I buy a new home in Washington?">
+            </div>
+            <input type="image" src="ask.jpg" alt="Ask!" class="ask2-image" width="50">
+        </div>
+    </form>
+    <p style="color: black; margin-left: 30px;"><strong>What are people asking <span style="text-decoration: underline; cursor: pointer;"><a href="https://www.ask.com/web?q=What%20are%20people%20asking%20RIGHT%20NOW?&ad=Other%20SEO&an=organic&o=779176" target="_blank" rel="noopener noreferrer" style="color: #c80404">RIGHT NOW </a></span>?</strong></p>
+</div>
+        </div>
+    
+        <div class="footer"> 
+        <a href="https://www.ask.com/" target="_blank" rel="noopener noreferrer">Make Jeeves Your Homepage</a> |
+        <a href="https://uk.ask.com/" target="_blank" rel="noopener noreferrer">Ask Jeeves U.K.</a> |
+        <a href="https://help.askmediagroup.com/hc/en-us/articles/360028605632-How-can-I-advertise-in-Ask-com-search-results" target="_blank" rel="noopener noreferrer">Advertise On Jeeves</a> |
+        <a href="https://www.blackhatworld.com/seo/ask-jeeves-search-affiliate-program.707569/" target="_blank" rel="noopener noreferrer">Become An Affiliate</a> |
+        <a href="https://www.gyford.com/misc/askjeeves/" target="_blank" rel="noopener noreferrer">Investor Relations</a> 
+        <br>
+    </div>
+
+    <div class="privacystatement">
+        <a href="https://www.askjeeves.net/privacy.html"  target="_blank" rel="noopener noreferrer">Privacy Statement</a><br>
+        © 1996-2000 Ask Jeeves, Inc.<br>
+        ASK JEEVES, ASK.COM and the JEEVES DESIGN are service marks of Ask Jeeves, Inc.<br>
+        All other brands are property of their respective owners. Patent pending.
+    </div>
+</body>
+</html>
